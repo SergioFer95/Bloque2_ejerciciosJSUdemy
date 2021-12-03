@@ -14,7 +14,7 @@ var number6 = parseInt(prompt("Paso 6 de 6: Introduce un número: ", 0));
 var numbersOfUsuary = [number1, number2, number3, number4, number5, number6];
 
 
-// 2) Tiene que mostrar el array entero con todos sus elementos en el cuerpo de la página y en la consola.
+// 2) Tienes que mostrar el array entero con todos sus elementos en el cuerpo de la página y en la consola.
 
 // document.write("<h3>" + numbersOfUsuary + "</h3>");
 // console.log(numbersOfUsuary);
@@ -30,7 +30,7 @@ numbersOfUsuary.sort();
 
 numbersOfUsuary.reverse();
 document.write("<h3>" + numbersOfUsuary + "</h3>");
-console.log(numbersOfUsuary);
+// console.log(numbersOfUsuary);
 
 // 5) Mostrar cuántos elementos tiene el array
 
@@ -39,3 +39,11 @@ for(var i = 0; i < numbersOfUsuary.length; i++){
 }
 
 // 6) Hacer una búsqueda de un valor introducido por el usuario y que nos diga si existe en el array, y que además, nos diga su índice, su posición:
+
+var question = parseInt(prompt("Ahora introduce un valor y te diremos si se encuentra dentro del array y en qué posición (índice), en caso de que exista: ", 0));
+
+var search3 = numbersOfUsuary.includes(question);
+var search2 = numbersOfUsuary.findIndex(numb => numb == question);
+
+
+console.log(search2, search3);
