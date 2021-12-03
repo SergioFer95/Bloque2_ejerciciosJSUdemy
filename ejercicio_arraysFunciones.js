@@ -63,10 +63,11 @@ document.write("<h3>" + numbers + "</h3>");
 //     console.log(numbersOfUsuary[i]);
 // }
 
+document.write("<h1>El array tiene: " + numbers.length +  " elementos</h1>");
 
-numbers.forEach(elemento => elemento =>{
-    console.log(numbers[elemento]);
-});
+// numbers.forEach(elemento => elemento =>{
+//     console.log(numbers[elemento]);
+// });
 
 
 // 6) Hacer una búsqueda de un valor introducido por el usuario y que nos diga si existe en el array, y que además, nos diga su índice, su posición:
@@ -86,7 +87,13 @@ var question = parseInt(prompt("Ahora introduce un valor y te diremos si se encu
 var search3 = numbers.includes(question);
 var search2 = numbers.findIndex(numb => numb == question);
 
-document.write("El número que has querido buscar es el: ", question);
+if(search2 == true && search3 != -1){
+    document.write("El número que has querido buscar es el: ", question + " y HA SIDO ENCONTRADO");
+
+}else {
+    document.write("El número que has querido buscar es el: ", question + " y NO EXISTE");
+}
+
 
 
 console.log(search2, search3);
